@@ -9,7 +9,6 @@ const input = fs
   .split("\n")
   .map(Number);
 
-console.log("array: ", input);
 console.log(
   "Product of values in input.txt that equaled 2020: ",
   productOf2020Elements(input)

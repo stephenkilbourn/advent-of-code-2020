@@ -1,25 +1,16 @@
 const valuesWithSumTo2020 = (numberArray) => {
   //find elements in number array that sum to 2020
   const targetValue = 2020;
+  let storageHash = {};
   let resultsArray = [];
   let previousNumbers = [];
 
-  for (let x in numberArray) {
-    for (let y in numberArray) {
-      if (numberArray[x] + numberArray[y] === targetValue) {
-        if (!!resultsArray.length) {
-          if (
-            !previousNumbers.includes(numberArray[x]) &&
-            !previousNumbers.includes(numberArray[y])
-          ) {
-            results.push(numberArray[x], numberArray[y]);
-          }
-        } else {
-          resultsArray.push(numberArray[x], numberArray[y]);
-          previousNumbers.push(numberArray[x]);
-        }
-      }
+  for (let i in numberArray) {
+    let addend = targetValue - numberArray[i];
+    if (addend in storageHash) {
+      resultsArray.push(addend, numberArray[i]);
     }
+    storageHash[numberArray[i]] = i;
   }
 
   return resultsArray;
