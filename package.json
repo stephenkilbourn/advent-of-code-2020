@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start": "nodemon --exec babel-node",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   }
 }
