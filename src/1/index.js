@@ -1,7 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 
-import { productOfTwo2020Elements, binarySearchTwoSum } from './main';
+import {
+  productOfTwo2020Elements,
+  productOfThree2020Elements,
+  binarySearchThreeSum,
+} from './main';
 
 const input = fs
   .readFileSync(path.join(__dirname, 'input.txt'))
@@ -15,11 +19,11 @@ console.log(
 );
 
 console.log(
-  'Product of three values in input.txt that equaled 2020: ',
-  productOfTwo2020Elements(input)
+  'three values in input.txt that equaled 2020: ',
+  binarySearchThreeSum(input, 2020)
 );
 
 console.log(
-  'binary search: ',
-  binarySearchTwoSum([1721, 979, 366, 299, 675, 1456])
+  'Product of three values in input.txt that equaled 2020: ',
+  productOfThree2020Elements(input)
 );

@@ -1,12 +1,15 @@
 import {
   binarySearchTwoSum,
+  binarySearchThreeSum,
   productOfArrayEntries,
   productOfTwo2020Elements,
+  productOfThree2020Elements,
   binarySearch,
 } from './main';
 
 const sampleNumbers = [1721, 979, 366, 299, 675, 1456];
-const sampleNumbersProduct = 514579;
+const twoSumSampleNumbersProduct = 514579;
+const threeSumSampleNumbersProduct = 241861950;
 
 it('return the product of the array entries', () => {
   expect(productOfArrayEntries([2, 3])).toEqual(6);
@@ -26,6 +29,22 @@ it('binarySearchTwoSum correctly returns Sample values from Advent', () => {
   expect(binarySearchTwoSum(array, sum).sort()).toEqual([1721, 299].sort());
 });
 
-it('return corrrect product of sample array', () => {
-  expect(productOfTwo2020Elements(sampleNumbers)).toEqual(sampleNumbersProduct);
+it('binarySearchThreeSum correctly returns Sample values from Advent', () => {
+  let array = [299, 1721, 979, 366, 299, 675, 1456, 299];
+  let sum = 2020;
+  expect(binarySearchThreeSum(array, sum).sort()).toEqual(
+    [979, 366, 675].sort()
+  );
+});
+
+it('two sum returns corrrect product of sample array', () => {
+  expect(productOfTwo2020Elements(sampleNumbers)).toEqual(
+    twoSumSampleNumbersProduct
+  );
+});
+
+it('three sum returns corrrect product of sample array', () => {
+  expect(productOfThree2020Elements(sampleNumbers)).toEqual(
+    threeSumSampleNumbersProduct
+  );
 });
