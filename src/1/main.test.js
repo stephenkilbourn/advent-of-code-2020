@@ -47,12 +47,10 @@ it('binarySearchThreeSum correctly returns Sample values from Advent', () => {
   );
 });
 
-it('binarySearchThreeSum correctly returns Sample values from Advent', () => {
-  let array = [2000, 20, 979, 366, 299, 675, 1456, 299];
-  let sum = 2020;
-  expect(binarySearchThreeSum(array, sum).sort()).toEqual(
-    [979, 366, 675].sort()
-  );
+it('binarySearchThreeSum correctly returns 3 values if 2 would fulfill', () => {
+  let array = [0, 0, 0, 1, 2, 3, 5, 6];
+  let sum = 6;
+  expect(binarySearchThreeSum(array, sum).sort()).toEqual([1, 2, 3].sort());
 });
 
 it('two sum returns corrrect product of sample array', () => {
