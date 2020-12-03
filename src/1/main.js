@@ -44,8 +44,7 @@ const binarySearchThreeSum = (array, target) => {
   let results = [];
 
   for (let indexA = 0; indexA < array.length - 2; indexA++) {
-    // skip any entries over our target value
-    if (sortedArray[indexA] > target) return results;
+
 
     let indexB = indexA + 1;
     let indexC = sortedArray.length - 1;

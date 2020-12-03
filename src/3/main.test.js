@@ -133,5 +133,8 @@ describe('part 1: check for trees 3 right and 1 row down', () => {
         )
       ).toBe(14);
     });
+    it('should handle route with zero trees', () => {
+      expect(productOfTreeCounts(slopesArray, treeFreeMap)).toBe(1);
+    });
   });
 });

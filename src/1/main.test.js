@@ -23,6 +23,16 @@ it('binarySearch corrrectly sorts', () => {
   expect(binarySearch(array, 1721)).toEqual(1721);
 });
 
+it('binarySearch corrrectly handles result in midpoint', () => {
+  let array = [1, 2, 3, 4, 5];
+  expect(binarySearch(array, 3)).toBe(3);
+});
+
+it('binarySearch corrrectly handles negative inputs', () => {
+  let array = [-1, 2, 3, 4, 5];
+  expect(binarySearch(array, -1)).toBe(-1);
+});
+
 it('binarySearchTwoSum correctly returns Sample values from Advent', () => {
   let array = [1721, 979, 366, 299, 675, 1456];
   let sum = 2020;
@@ -31,6 +41,14 @@ it('binarySearchTwoSum correctly returns Sample values from Advent', () => {
 
 it('binarySearchThreeSum correctly returns Sample values from Advent', () => {
   let array = [299, 1721, 979, 366, 299, 675, 1456, 299];
+  let sum = 2020;
+  expect(binarySearchThreeSum(array, sum).sort()).toEqual(
+    [979, 366, 675].sort()
+  );
+});
+
+it('binarySearchThreeSum correctly returns Sample values from Advent', () => {
+  let array = [2000, 20, 979, 366, 299, 675, 1456, 299];
   let sum = 2020;
   expect(binarySearchThreeSum(array, sum).sort()).toEqual(
     [979, 366, 675].sort()
