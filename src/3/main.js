@@ -6,24 +6,33 @@ const checkForTree = (line, position) => {
   }
 };
 
-const countTrees = (mapArray, rowsDown = 1, columnsRight = 3) => {
+const countTrees = (mapArray, columnsRight = 3, rowsDown = 1) => {
   let count = 0;
   let testPosition = 1 + columnsRight;
-  let testedMap = [];
 
-  for (let index = 1; index < mapArray.length; index = index + rowsDown) {
+  for (let index = rowsDown; index < mapArray.length; index = index + rowsDown) {
     const row = mapArray[index];
-    testedMap.push(row);
+
     if (testPosition > row.length) {
       testPosition = testPosition - row.length;
     }
     if (checkForTree(row, testPosition)) {
       count++;
-    } 
+    }
     testPosition = testPosition + columnsRight;
   }
-
   return count;
 };
 
-export { checkForTree, countTrees };
+const productOfTreeCounts = (slopesArray, mapArray) => {
+  let counts = 1;
+  slopesArray.forEach((slopes) => {
+    const newTrees = countTrees(mapArray, slopes[0], slopes[1]);
+    if (newTrees !== 0) {
+      counts = counts * countTrees(mapArray, slopes[0], slopes[1]);
+    }
+  });
+  return counts;
+};
+
+export { checkForTree, countTrees, productOfTreeCounts };
