@@ -14,22 +14,26 @@ const testRuleArray = [
 ];
 
 const createLuggageRules = (ruleArray) => {
-  const ruleSet = {};
+  let count = 0;
+  const rules= {};
 
   ruleArray.forEach((rule) => {
     let outerColor = rule.split(' contain ')[0];
 
-    let subRules = rule.split(' contain ')[1].split(',');
+    let subRules = rule
+      .split(' contain ')[1]
+      .replace(/(\d\s)/g, '')
+      .split(',');
 
     if (subRules.includes('no other bags.')) {
       subRules.pop();
     }
-    if (!ruleSet[outerColor]) {
-      ruleSet[outerColor] = subRules;
+    if (!rules[outerColor]) {
+      rules[outerColor] = subRules;
     }
   });
 
-  return ruleSet;
+  return rules;
 };
 
 console.log('ruleArray', createLuggageRules(testRuleArray));
