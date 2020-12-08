@@ -23,38 +23,75 @@ const parseInstructions = (rawInput) => {
 
 const runInstructions = (instructions) => {
   let accumulator = 0;
-  let currentIndex = 0;
+  let index = 0;
 
   while (1) {
-    if (currentIndex === instructions.length) {
-      return accumulator;
+    if (index === instructions.length) {
+      return { accumulator, terminates: true };
     }
 
-    const instruction = instructions[currentIndex];
+    const instruction = instructions[index];
     if (instruction.visited) {
-      return accumulator;
+      return { accumulator, terminates: false };
     }
 
     instruction.visited = true;
 
     switch (instruction.operation) {
       case 'nop': {
-        currentIndex++;
+        index++;
         break;
       }
 
       case 'acc': {
         accumulator += instruction.arguement;
-        currentIndex++;
+        index++;
         break;
       }
 
       case 'jmp': {
-        currentIndex += instruction.arguement;
+        index += instruction.arguement;
         break;
       }
     }
   }
 };
 
-export { parseInstructions, runInstructions }
+const findBrokenInstructions = (instructions) => {
+  let accumulator = 0;
+  for (let index = 0; index < instructions.length; index++) {
+    //if operation at thiis index is nop change to jmp. if jmp to nop
+    if (instructions[index].operation === 'nop') {
+      let testInstructions = JSON.parse(JSON.stringify(instructions));
+      testInstructions[index].operation = 'jmp';
+      const testResult = runInstructions(testInstructions);
+      if (testResult.terminates) {
+        console.log(
+          'terminated on changing',
+          instructions[index],
+          'with accumulator at',
+          testResult.accumulator
+        );
+        accumulator = testResult.accumulator;
+        break;
+      }
+    } else if (instructions[index].operation === 'jmp') {
+      let testInstructions = JSON.parse(JSON.stringify(instructions));
+      testInstructions[index].operation = 'nop';
+      const testResult = runInstructions(testInstructions);
+      if (testResult.terminates) {
+        console.log(
+          'terminated on changing',
+          instructions[index],
+          'with accumulator at',
+          testResult.accumulator
+        );
+        accumulator = testResult.accumulator;
+        break;
+      }
+    }
+  }
+  return accumulator;
+};
+
+export { parseInstructions, runInstructions, findBrokenInstructions };
