@@ -1,6 +1,3 @@
-const testRule =
-  'muted yellow bags contain 2 shiny gold bags, 9 faded blue bags';
-
 const testRuleArray = [
   'light red bags contain 1 bright white bag, 2 muted yellow bags.',
   'dark orange bags contain 3 bright white bags, 4 muted yellow bags.',
@@ -13,34 +10,115 @@ const testRuleArray = [
   'dotted black bags contain no other bags.',
 ];
 
-const createLuggageRules = (ruleArray) => {
-  let count = 0;
-  const rules= {};
+class LuggageTree {
+  constructor(rule_array) {
+    this.bags_lookup = this.parseToBagsLookup(rule_array);
+    this.rules = this.parseToRulesLookup(rule_array);
+  }
 
-  ruleArray.forEach((rule) => {
-    let outerColor = rule.split(' contain ')[0];
-
-    let subRules = rule
-      .split(' contain ')[1]
-      .replace(/(\d\s)/g, '')
-      .split(',');
-
-    if (subRules.includes('no other bags.')) {
-      subRules.pop();
+  parseToBagsLookup(rule_array) {
+    const regex = new RegExp(/(\d+) (\w+ \w+)/);
+    let bags_lookup = {};
+    for (let rule of rule_array) {
+      let [parent, children] = rule.split(' bags contain ');
+      if (!bags_lookup[parent]) {
+        bags_lookup[parent] = new Bag({ name: parent });
+      }
+      if (children.includes('no other')) {
+        continue;
+      }
+      children = children.split(',');
+      for (let child of children) {
+        
+        child = child.replace(/\sbags?/g, '')
+        let [, count, name] = regex.exec(child);
+        count = parseInt(count);
+        let bag = bags_lookup[name];
+        if (!bag) {
+          bag = new Bag({ name });
+          bags_lookup[name] = bag;
+        }
+        bag.addParent(bags_lookup[parent]);
+      }
     }
-    if (!rules[outerColor]) {
-      rules[outerColor] = subRules;
+    return bags_lookup;
+  }
+
+  parseToRulesLookup(rule_array) {
+    let bags_lookup = {};
+    const regex = new RegExp(/(\d+) (\w+ \w+)/);
+
+    for (let rule of rule_array) {
+      let [parent, children] = rule.split(' bags contain ');
+      if (!bags_lookup[parent]) {
+        bags_lookup[parent] = [];
+      }
+      if (children.includes('no other')) {
+        continue;
+      }
+      children = children.split(', ');
+      for (let child of children) {
+        let [, count, name] = regex.exec(child);
+        count = parseInt(count);
+        bags_lookup[parent].push(new Bag({ name, count }));
+      }
     }
-  });
+    return bags_lookup;
+  }
 
-  return rules;
-};
+  countChildrenInBag(bagName) {
+    let rules = this.rules[bagName];
 
-console.log('ruleArray', createLuggageRules(testRuleArray));
+    let childrenCount = 0;
+    for (let bag of rules) {
+      let { name, count } = bag;
+      childrenCount += count;
+      childrenCount += count * this.countChildrenInBag(name);
+    }
+    return childrenCount;
+  }
+}
 
-//get array of strings
-// itereate each line
-//split top bag (left side) contains rules (right side)
-// if you see gold in that line's rules, increase count of gold
-// if no gold seen, split bags on right by comma
-// check for rule of sub bags
+class Bag {
+  constructor({ name, count }) {
+    this.name = name;
+    this.count = count;
+    this.parent_bags = [];
+  }
+
+  addParent(parent_bag) {
+    this.parent_bags.push(parent_bag);
+  }
+
+  countUniqueParents() {
+    let lookup = this._getUniqueAncestosLookup({});
+    return Object.keys(lookup).length;
+  }
+
+  _getUniqueAncestosLookup(lookup) {
+    for (let parent of this.parent_bags) {
+      lookup[parent.name] = parent;
+      if (parent.parent_bags.length) {
+        parent._getUniqueAncestosLookup(lookup);
+      }
+    }
+    return lookup;
+  }
+}
+
+import fs from 'fs';
+import path from 'path';
+
+const input = fs
+  .readFileSync(path.join(__dirname, 'input.txt'))
+  .toString()
+  .split('\n');
+
+let luggage = new LuggageTree(input);
+let shiney_gold = luggage.bags_lookup['shiny gold'];
+console.log('Part One: count of shiney gold', shiney_gold.countUniqueParents());
+
+let shiny_child_count = luggage.countChildrenInBag('shiny gold');
+console.log('Part Two: Total number of bags in a shiney gold', shiny_child_count);
+
+

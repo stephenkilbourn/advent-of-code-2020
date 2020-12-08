@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import { addGroups, addUniqueGroups, answeredByAll } from './main';
+import { addGroups, addUniqueGroups } from './main';
 
 const input = fs
   .readFileSync(path.join(__dirname, 'input.txt'))
