@@ -1,0 +1,29 @@
+{
+  "discovery_items": [
+    {
+      "prefix": "12",
+      "bucket": "12"
+    },
+    {
+      "prefix": "tw",
+      "bucket": "tt"
+    }
+  ],
+  "sample_files": [
+    "22"
+  ],
+  "collection": "bluey",
+  "title": "bob",
+  "license": "test",
+  "description": "tess",
+  "spatial_extent": {
+    "xmin": 1,
+    "ymin": 2,
+    "xmax": 1,
+    "ymax": 22
+  },
+  "temporal_extent": {
+    "startdate": "2024-11-04",
+    "enddate": "2024-11-04"
+  }
+}
