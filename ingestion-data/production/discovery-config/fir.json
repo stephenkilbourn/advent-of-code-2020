@@ -1,0 +1,25 @@
+{
+  "discovery_items": [
+    {
+      "prefix": "3r3",
+      "bucket": "444"
+    }
+  ],
+  "sample_files": [
+    "44"
+  ],
+  "collection": "fir",
+  "title": "st",
+  "license": "kkl",
+  "description": "44",
+  "spatial_extent": {
+    "xmin": 1,
+    "ymin": -3,
+    "xmax": 1,
+    "ymax": 2
+  },
+  "temporal_extent": {
+    "startdate": "2024-10-27",
+    "enddate": "2024-11-24"
+  }
+}
