@@ -1,0 +1,25 @@
+{
+  "discovery_items": [
+    {
+      "prefix": "test",
+      "bucket": "test"
+    }
+  ],
+  "sample_files": [
+    "345"
+  ],
+  "collection": "move",
+  "title": "title",
+  "license": "free",
+  "description": "test",
+  "spatial_extent": {
+    "xmin": 4,
+    "ymin": 4,
+    "xmax": 5,
+    "ymax": 4
+  },
+  "temporal_extent": {
+    "startdate": "2024-11-01",
+    "enddate": "2024-11-03"
+  }
+}
