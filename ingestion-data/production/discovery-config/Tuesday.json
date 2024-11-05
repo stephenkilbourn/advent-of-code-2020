@@ -1,0 +1,24 @@
+{
+  "discovery_items": [
+    {
+      "prefix": "1",
+      "bucket": "2"
+    }
+  ],
+  "sample_files": [
+    "3"
+  ],
+  "collection": "Tuesday",
+  "title": "ee",
+  "license": "44",
+  "description": "ee",
+  "spatial_extent": {
+    "xmin": 3,
+    "ymin": 3,
+    "xmax": 3,
+    "ymax": 3
+  },
+  "temporal_extent": {
+    "startdate": "2024-11-05"
+  }
+}
