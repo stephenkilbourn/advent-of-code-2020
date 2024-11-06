@@ -1,0 +1,25 @@
+{
+  "discovery_items": [
+    {
+      "prefix": "rr",
+      "bucket": "tt"
+    }
+  ],
+  "sample_files": [
+    "tt"
+  ],
+  "collection": "paw-patrol",
+  "title": "test",
+  "license": "tt",
+  "description": "ttt",
+  "spatial_extent": {
+    "xmin": 3,
+    "ymin": 3,
+    "xmax": 2,
+    "ymax": 2
+  },
+  "temporal_extent": {
+    "startdate": "2024-11-03",
+    "enddate": "2024-11-05"
+  }
+}
