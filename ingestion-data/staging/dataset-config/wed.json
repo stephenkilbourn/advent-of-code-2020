@@ -1,0 +1,25 @@
+{
+  "discovery_items": [
+    {
+      "prefix": "gg",
+      "bucket": "gg"
+    }
+  ],
+  "sample_files": [
+    "gg"
+  ],
+  "collection": "wed",
+  "title": "blue",
+  "license": "fre",
+  "description": "blue",
+  "spatial_extent": {
+    "xmin": 1,
+    "ymin": 2,
+    "xmax": 1,
+    "ymax": 2
+  },
+  "temporal_extent": {
+    "startdate": "2024-11-03",
+    "enddate": "2024-11-10"
+  }
+}
