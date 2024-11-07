@@ -1,0 +1,25 @@
+{
+  "discovery_items": [
+    {
+      "prefix": "gg",
+      "bucket": "ggg"
+    }
+  ],
+  "sample_files": [
+    "gg"
+  ],
+  "collection": "boop beep.com",
+  "title": "test",
+  "license": "mitts",
+  "description": "ddikld",
+  "spatial_extent": {
+    "xmin": 2,
+    "ymin": 2,
+    "xmax": 2,
+    "ymax": 2
+  },
+  "temporal_extent": {
+    "startdate": "2024-11-07",
+    "enddate": "2024-11-24"
+  }
+}
