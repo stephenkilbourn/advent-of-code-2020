@@ -1,0 +1,25 @@
+{
+  "discovery_items": [
+    {
+      "prefix": "files",
+      "bucket": "here"
+    }
+  ],
+  "sample_files": [
+    "test.test"
+  ],
+  "collection": "tuesday",
+  "title": "test",
+  "license": "test",
+  "description": "ttt",
+  "spatial_extent": {
+    "xmin": 5,
+    "ymin": 5,
+    "xmax": 5,
+    "ymax": 5
+  },
+  "temporal_extent": {
+    "startdate": "2023-11-05",
+    "enddate": "2024-11-24"
+  }
+}
