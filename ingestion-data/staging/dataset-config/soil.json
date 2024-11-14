@@ -1,0 +1,29 @@
+{
+  "discovery_items": [
+    {
+      "prefix": "test",
+      "bucket": "test"
+    },
+    {
+      "prefix": "second",
+      "bucket": "test"
+    }
+  ],
+  "sample_files": [
+    "test"
+  ],
+  "collection": "soil",
+  "title": "test",
+  "license": "test",
+  "description": "t",
+  "spatial_extent": {
+    "xmin": 2,
+    "ymin": 1,
+    "xmax": 2,
+    "ymax": 2
+  },
+  "temporal_extent": {
+    "startdate": "2024-11-26",
+    "enddate": "2024-11-26"
+  }
+}
