@@ -1,0 +1,29 @@
+{
+  "discovery_items": [
+    {
+      "prefix": "test",
+      "bucket": "bucket"
+    },
+    {
+      "prefix": "second",
+      "bucket": "one"
+    }
+  ],
+  "sample_files": [
+    "test.test"
+  ],
+  "collection": "test stuff",
+  "title": "test",
+  "license": "t",
+  "description": "t",
+  "spatial_extent": {
+    "xmin": 1,
+    "ymin": 2,
+    "ymax": 1,
+    "xmax": -1
+  },
+  "temporal_extent": {
+    "startdate": "2024-11-03",
+    "enddate": "2024-11-03"
+  }
+}
