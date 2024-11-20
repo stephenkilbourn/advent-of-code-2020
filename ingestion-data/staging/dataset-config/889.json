@@ -1,0 +1,27 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 1,
+    "ymin": 1,
+    "xmax": 1,
+    "ymax": 1
+  },
+  "temporal_extent": {
+    "startdate": "2024-11-01"
+  },
+  "discovery_items": [
+    {
+      "prefix": "j",
+      "bucket": "777"
+    }
+  ],
+  "sample_files": [
+    "6"
+  ],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "collection": "889",
+  "title": "hk",
+  "license": "hj",
+  "description": "hgjh 77"
+}
