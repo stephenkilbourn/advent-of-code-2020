@@ -1,0 +1,18 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 2,
+    "ymin": 1,
+    "xmax": 2,
+    "ymax": 1
+  },
+  "temporal_extent": {},
+  "discovery_items": [],
+  "sample_files": [],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "collection": "test-demo",
+  "title": "klkl",
+  "license": "gg",
+  "description": "ggje"
+}
