@@ -1,0 +1,28 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 1,
+    "ymin": 1,
+    "xmax": 1,
+    "ymax": 1
+  },
+  "temporal_extent": {
+    "startdate": "2024-12-01",
+    "enddate": "2024-12-02"
+  },
+  "discovery_items": [
+    {
+      "prefix": "hk",
+      "bucket": "jjk"
+    }
+  ],
+  "sample_files": [
+    "gg"
+  ],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "collection": "ezra",
+  "title": "bb",
+  "license": "h",
+  "description": "hh"
+}
