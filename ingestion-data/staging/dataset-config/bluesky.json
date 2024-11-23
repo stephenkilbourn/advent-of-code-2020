@@ -1,0 +1,21 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 7,
+    "ymin": 7,
+    "xmax": 8,
+    "ymax": 8
+  },
+  "temporal_extent": {
+    "startdate": "2024-11-04",
+    "enddate": "2024-11-03"
+  },
+  "discovery_items": [],
+  "sample_files": [],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "collection": "bluesky",
+  "title": "mk",
+  "license": "kk",
+  "description": "kk"
+}
