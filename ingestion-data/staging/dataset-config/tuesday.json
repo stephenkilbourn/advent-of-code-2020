@@ -1,0 +1,23 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 2,
+    "ymin": 2,
+    "xmax": -1,
+    "ymax": -1
+  },
+  "temporal_extent": {
+    "startdate": "2024-12-01",
+    "enddate": "2024-12-01"
+  },
+  "discovery_items": [],
+  "sample_files": [],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "collection": "tuesday",
+  "title": "test",
+  "license": "free",
+  "description": "help",
+  "dashboard:is_periodic": true,
+  "dashboard:time_density": "thic"
+}
