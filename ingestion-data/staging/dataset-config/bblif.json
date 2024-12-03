@@ -1,0 +1,21 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 2,
+    "ymin": -1,
+    "ymax": 1,
+    "xmax": 1
+  },
+  "temporal_extent": {
+    "startdate": "2024-12-01",
+    "enddate": "2025-01-07"
+  },
+  "discovery_items": [],
+  "sample_files": [],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "collection": "bblif",
+  "title": "dr",
+  "license": "t",
+  "description": "tt"
+}
