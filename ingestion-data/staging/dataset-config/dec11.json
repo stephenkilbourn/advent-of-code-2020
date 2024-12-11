@@ -1,0 +1,28 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": -1,
+    "ymin": 1,
+    "xmax": 3,
+    "ymax": 3
+  },
+  "temporal_extent": {
+    "startdate": "2024-12-01",
+    "enddate": "2024-12-31"
+  },
+  "discovery_items": [
+    {
+      "prefix": "before",
+      "bucket": "stuff"
+    }
+  ],
+  "sample_files": [
+    "test.cog"
+  ],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "collection": "dec11",
+  "title": "test",
+  "license": "test",
+  "description": "test"
+}
