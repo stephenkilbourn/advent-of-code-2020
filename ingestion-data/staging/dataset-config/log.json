@@ -1,0 +1,28 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 1,
+    "ymin": 1,
+    "xmax": 1,
+    "ymax": 1
+  },
+  "temporal_extent": {
+    "startdate": "2024-12-29",
+    "enddate": "2024-12-30"
+  },
+  "discovery_items": [
+    {
+      "prefix": "ttt",
+      "bucket": "ttt"
+    }
+  ],
+  "sample_files": [
+    "ttt"
+  ],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "collection": "log",
+  "title": "here",
+  "license": "test",
+  "description": "test"
+}
