@@ -1,0 +1,28 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": -4,
+    "ymin": -3,
+    "xmax": 1,
+    "ymax": 4
+  },
+  "temporal_extent": {
+    "startdate": "2024-12-01",
+    "enddate": "2024-12-31"
+  },
+  "discovery_items": [
+    {
+      "prefix": "re",
+      "bucket": "ggg"
+    }
+  ],
+  "sample_files": [
+    "reeg"
+  ],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "collection": "thunder",
+  "title": "clouds",
+  "license": "free",
+  "description": "scary"
+}
