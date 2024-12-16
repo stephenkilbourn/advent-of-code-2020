@@ -1,0 +1,31 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 8,
+    "ymin": 8,
+    "xmax": 8000000,
+    "ymax": 888398890
+  },
+  "temporal_extent": {
+    "startdate": "2024-12-01",
+    "enddate": "2024-12-29"
+  },
+  "discovery_items": [
+    {
+      "prefix": "pre",
+      "bucket": "fix"
+    }
+  ],
+  "sample_files": [
+    "test.test"
+  ],
+  "data_type": "cog",
+  "stac_extensions": [
+    "plus"
+  ],
+  "collection": "blizzard",
+  "title": "weather not DQ",
+  "license": "MIT",
+  "description": "cold",
+  "dashboard:time_density": "thick"
+}
