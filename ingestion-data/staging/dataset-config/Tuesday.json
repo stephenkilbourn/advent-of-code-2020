@@ -1,0 +1,28 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 3,
+    "ymin": -3,
+    "ymax": 11,
+    "xmax": 145
+  },
+  "temporal_extent": {
+    "startdate": "2024-12-01",
+    "enddate": "2024-12-31"
+  },
+  "discovery_items": [
+    {
+      "prefix": "test",
+      "bucket": "test"
+    }
+  ],
+  "sample_files": [
+    "ttt"
+  ],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "collection": "Tuesday",
+  "title": "test",
+  "license": "Hello",
+  "description": "kkldkl lkdlklk"
+}
