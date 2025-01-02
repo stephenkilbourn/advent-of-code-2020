@@ -12,6 +12,11 @@
   },
   "discovery_items": [
     {
+      "upload": false,
+      "cogify": false,
+      "dry_run": false,
+      "filename_regex": "[\\s\\S]*",
+      "use_multithreading": false,
       "prefix": "re",
       "bucket": "ggg"
     }
@@ -21,6 +26,35 @@
   ],
   "data_type": "cog",
   "stac_extensions": [],
+  "item_assets": {
+    "cog_default": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data",
+        "layer"
+      ],
+      "title": "Default COG Layer",
+      "description": "Cloud optimized default layer to display on map"
+    }
+  },
+  "providers": [
+    {
+      "roles": [],
+      "name": "test",
+      "description": "test"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "roles": [
+        "test"
+      ],
+      "title": "test",
+      "href": "test",
+      "type": "test",
+      "description": "test"
+    }
+  },
   "collection": "thunder",
   "title": "clouds",
   "license": "free",
