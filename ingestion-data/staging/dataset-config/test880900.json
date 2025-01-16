@@ -52,5 +52,6 @@
   "collection": "test 880900",
   "title": "test",
   "license": "test",
-  "description": "test"
+  "description": "test",
+  "dashboard:time_density": "t"
 }
