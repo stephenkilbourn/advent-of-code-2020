@@ -53,5 +53,8 @@
   "title": "test",
   "license": "test",
   "description": "test",
-  "dashboard:time_density": "t"
+  "dashboard:time_density": "t",
+  "renders": {
+    "renders_object": "{\n  \"bidx\": [\n    1,\n    1,\n    1\n  ],\n  \"colormap_name\": \"internal\",\n  \"assets\": [\n    \"cog_default\"\n  ]\n}"
+  }
 }
