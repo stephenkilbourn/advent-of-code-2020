@@ -1,0 +1,82 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 4,
+    "ymin": 4,
+    "xmax": 4,
+    "ymax": 4
+  },
+  "temporal_extent": {
+    "startdate": "2025-01-05",
+    "enddate": "2025-01-27"
+  },
+  "discovery_items": [
+    {
+      "upload": false,
+      "cogify": false,
+      "dry_run": false,
+      "filename_regex": "[\\s\\S]*",
+      "use_multithreading": false,
+      "prefix": "44",
+      "bucket": "44"
+    }
+  ],
+  "sample_files": [
+    "test"
+  ],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "item_assets": {
+    "cog_default": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data",
+        "layer"
+      ],
+      "title": "Default COG Layer",
+      "description": "Cloud optimized default layer to display on map"
+    }
+  },
+  "providers": [
+    {
+      "roles": [
+        "host"
+      ],
+      "name": "44"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "roles": [
+        "gg"
+      ],
+      "title": "44gr",
+      "description": "ggf",
+      "type": "gg",
+      "href": "ggg"
+    }
+  },
+  "renders": {
+    "dashboard": {
+      "resampling": "nearest",
+      "bidx": [
+        1
+      ],
+      "colormap_name": "rdbu",
+      "assets": [
+        "cog_default"
+      ],
+      "rescale": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "title": "VEDA Dashboard Render Parameters"
+    }
+  },
+  "collection": "ttt",
+  "title": "t",
+  "license": "t",
+  "description": "t"
+}
