@@ -1,0 +1,76 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 3,
+    "ymin": 3,
+    "xmax": 3,
+    "ymax": 3
+  },
+  "temporal_extent": {
+    "startdate": "2025-01-31T07:00:00.000Z",
+    "enddate": "2025-01-31T07:06:00.000Z"
+  },
+  "discovery_items": [
+    {
+      "upload": false,
+      "cogify": false,
+      "dry_run": false,
+      "filename_regex": "[\\s\\S]*",
+      "use_multithreading": false,
+      "prefix": "test",
+      "bucket": "test"
+    }
+  ],
+  "sample_files": [
+    "s3://veda-data-store-staging/planet-indices-v2/NDVI_Difference_2021-08-23_2021-09-09.tif"
+  ],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "item_assets": {
+    "cog_default": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data",
+        "layer"
+      ],
+      "title": "Default COG Layer",
+      "description": "Cloud optimized default layer to display on map"
+    }
+  },
+  "providers": [
+    {
+      "roles": [
+        "host"
+      ],
+      "name": "test"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "roles": [
+        "test"
+      ],
+      "title": "test",
+      "href": "test",
+      "type": "test",
+      "description": "test"
+    }
+  },
+  "collection": "Jan 30",
+  "title": "test",
+  "license": "test",
+  "description": "test",
+  "dashboard:time_density": "test",
+  "renders": {
+    "bidx": [
+      1
+    ],
+    "rescale": [],
+    "colormap_name": "cfastie",
+    "resampling": null,
+    "nodata": "255",
+    "assets": [
+      "cog_default"
+    ]
+  }
+}
