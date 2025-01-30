@@ -1,0 +1,63 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": 7,
+    "ymin": 7,
+    "xmax": -1,
+    "ymax": -1
+  },
+  "temporal_extent": {
+    "startdate": "2025-01-02T08:03:00.000Z",
+    "enddate": "2025-01-02T08:03:00.000Z"
+  },
+  "discovery_items": [
+    {
+      "upload": false,
+      "cogify": false,
+      "dry_run": false,
+      "filename_regex": "[\\s\\S]*",
+      "use_multithreading": false,
+      "prefix": "test",
+      "bucket": "test"
+    }
+  ],
+  "sample_files": [
+    "test"
+  ],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "item_assets": {
+    "cog_default": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data",
+        "layer"
+      ],
+      "title": "Default COG Layer",
+      "description": "Cloud optimized default layer to display on map"
+    }
+  },
+  "providers": [
+    {
+      "roles": [
+        "host"
+      ],
+      "name": "test"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "roles": [
+        "klklk"
+      ],
+      "title": "hh",
+      "description": "lk",
+      "href": "jj",
+      "type": "jjj"
+    }
+  },
+  "collection": "debugging",
+  "title": "t",
+  "license": "y",
+  "description": "h"
+}
