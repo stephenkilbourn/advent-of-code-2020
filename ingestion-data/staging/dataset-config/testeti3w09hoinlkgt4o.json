@@ -60,5 +60,14 @@
   "title": "test",
   "license": "tetee",
   "description": "tetffffg",
-  "renders": "{\n  \"bidx\": [\n    1\n  ],\n  \"rescale\": [],\n  \"resampling\": null,\n  \"assets\": [\n    \"cog_default\"\n  ]\n}"
+  "renders": {
+    "bidx": [
+      2
+    ],
+    "rescale": [],
+    "resampling": null,
+    "assets": [
+      "cog_default"
+    ]
+  }
 }
