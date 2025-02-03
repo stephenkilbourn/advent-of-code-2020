@@ -73,7 +73,7 @@
   "dashboard:time_density": "test",
   "renders": {
     "bidx": [
-      1
+      2
     ],
     "rescale": [],
     "colormap_name": "cfastie",
