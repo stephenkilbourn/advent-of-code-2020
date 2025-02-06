@@ -62,7 +62,27 @@
       "description": "test"
     }
   },
+  "extra": true,
   "collection": "test with no renders",
   "title": "test",
-  "description": "test"
+  "description": "test",
+  "renders": {
+    "dashboard": {
+      "resampling": "nearest",
+      "bidx": [
+        1
+      ],
+      "colormap_name": "rdbu",
+      "assets": [
+        "cog_default"
+      ],
+      "rescale": [
+        [
+          -1,
+          5
+        ]
+      ],
+      "title": "VEDA Dashboard Render Parameters"
+    }
+  }
 }
