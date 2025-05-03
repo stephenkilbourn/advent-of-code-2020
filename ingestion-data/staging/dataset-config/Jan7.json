@@ -1,0 +1,70 @@
+{
+  "links": [],
+  "spatial_extent": {
+    "xmin": -99.99,
+    "ymin": -11.11,
+    "xmax": 999.999,
+    "ymax": 0
+  },
+  "temporal_extent": {
+    "startdate": "2025-01-01",
+    "enddate": "2025-01-31"
+  },
+  "discovery_items": [
+    {
+      "upload": true,
+      "cogify": true,
+      "dry_run": false,
+      "filename_regex": "[\\s\\S]*",
+      "use_multithreading": false,
+      "discovery": "s3",
+      "prefix": "test",
+      "bucket": "test",
+      "start_datetime": "2025-01-07T10:04:04.000Z",
+      "end_datetime": "2025-01-01T14:07:07.000Z"
+    }
+  ],
+  "sample_files": [
+    "test"
+  ],
+  "data_type": "cog",
+  "stac_extensions": [],
+  "item_assets": {
+    "cog_default": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data",
+        "layer"
+      ],
+      "title": "Default COG Layer",
+      "description": "Cloud optimized default layer to display on map"
+    }
+  },
+  "providers": [
+    {
+      "roles": [
+        "producer"
+      ],
+      "name": "test"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "roles": [
+        "test"
+      ],
+      "title": "testy",
+      "description": "test",
+      "href": "test",
+      "type": "test"
+    }
+  },
+  "collection": "Jan 7",
+  "title": "test",
+  "license": "test",
+  "description": "test",
+  "dashboard:time_density": "thick",
+  "renders": {
+    "renders_object": "bookegnieoi"
+  }
+}
